@@ -10,8 +10,6 @@ addToDO = (text) => {
     id: Date.now(),
   };
   toDoItems.push(toDo);
-  console.log(toDoItems);
-
   list.insertAdjacentHTML(
     "beforeend",
     `
@@ -28,7 +26,6 @@ addToDO = (text) => {
 };
 function toggleDone(key) {
   const index = toDoItems.findIndex((item) => item.id === Number(key));
-
 }
 function deleteTodo(key) {
   toDoItems = toDoItems.filter(item => item.id !== Number(key));
@@ -38,6 +35,7 @@ function deleteTodo(key) {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  document.querySelector(".todo-hint").style.display = "none";
   const item = input.value.trim();
   if (item !== "") {
     addToDO(item);
