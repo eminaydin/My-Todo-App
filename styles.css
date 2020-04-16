@@ -1,7 +1,17 @@
-main {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin:  0 auto;
-    
+body {
+  margin: 0 auto;
+  width: 50%;
+}
+.todo-list {
+  text-align-last: justify;
+  border: 3px solid #ecf0f1;
+}
+.todo-text {
+  border-left: 3px solid #ecf0f1;
+  padding: 20px;
+  
+}
+
+.todo-label {
+  border-bottom: 3px solid #ecf0f1;
 }
