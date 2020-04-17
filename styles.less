@@ -18,16 +18,7 @@ body {
   width: 400px;
   border: 2px solid black;
 }
-.todo-text {
-  border-left: 2px solid black;
-  padding: 20px;
-}
-ul {
-  border: 2px solid black;
-}
-li {
-  list-style-type: none;
-  }
+
 .close {
   text-align: right;
 }
@@ -41,9 +32,7 @@ width: 100%;
 .todo-li .todo-text {
   flex-grow: 1;
 }
-.done {
-  text-decoration: line-through;
-}
+
 
 .list {
   display: flex;
@@ -146,3 +135,12 @@ width: 100%;
     }
   }
 }
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  padding: 12px 16px;
+  transform: translate(0%, -50%);
+}
+.close:hover {background: #bbb;}
