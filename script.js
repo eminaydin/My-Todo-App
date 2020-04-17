@@ -14,7 +14,7 @@ addToDO = (text) => {
     `
   <li class="list-item" data-key="${toDo.id}">
   <span class="close">x</span>
-  <input type="checkbox" class="hidden-box" id=${toDo.id}/>
+  <input type="checkbox" class="hidden-box" id="${toDo.id}"/>
   <label for=${toDo.id} class="check--label">
     <span class="check--label-box"></span>
     <span class="check--label-text">${toDo.text}</span>
@@ -25,25 +25,24 @@ addToDO = (text) => {
   );
 };
 function toggleDone(key) {
-  const index = toDoItems.findIndex((item) => item.id === Number(key));
+  const index = toDoItems.findIndex(item => item.id === Number(key));
   toDoItems[index].checked = !toDoItems[index].checked;
 
   const item = document.querySelector(`.hidden-box`);
   if (toDoItems[index].checked) {
-    item.setAttribute("checked", "");
-  } else {
-    item.removeAttribute("checked", "");
+    item.setAttribute("checked","");
   }
 }
 
 function deleteTodo(key) {
   toDoItems = toDoItems.filter((item) => item.id !== Number(key));
-  const item = document.querySelector(`[data-key="${key}"]`);
+  const item = document.querySelector(`[data-key="${key}"]`);  
   item.remove();
 }
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  
   document.querySelector(".todo-hint").style.display = "none";
   const item = input.value.trim();
   if (item !== "") {
@@ -54,14 +53,14 @@ form.addEventListener("submit", (e) => {
 });
 
 list.addEventListener("click", (event) => {
-  if (event.target.classList.contains("check--label-box")) {
+  if (event.target.classList.contains('check--label-box')) {
     const itemKey = event.target.parentElement.parentElement.dataset.key;
     toggleDone(itemKey);
   }
 
   if (event.target.classList.contains("close")) {
     const itemKey = event.target.parentElement.dataset.key;
-
+  
     deleteTodo(itemKey);
   }
 });
