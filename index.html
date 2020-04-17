@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
+      <link rel="stylesheet/less" type="text/css" href="styles.less" />
     <title>Document</title>
   </head>
   <body>
@@ -14,9 +14,32 @@
       <form action="" class="form">
         <input type="text" class="todo" name="todo"/>
        <div class="todo-hint">  <h1>Create todos for yourself so your partner loses one more argument to blame you!</h1> </div>
-        <ul class="todo-list"></ul>
+        <ul class="todo-list">
+          <li class="list-item">
+            <input type="checkbox" class="hidden-box" id="first" checked/>
+            <label for="first" class="check--label">
+              <span class="check--label-box"></span>
+              <span class="check--label-text">First Checkbox</span>
+            </label>
+          </li>
+          <li class="list-item">
+            <input type="checkbox" class="hidden-box" id="second" />
+            <label for="second" class="check--label">
+              <span class="check--label-box"></span>
+              <span class="check--label-text">Second Checkbox</span>
+            </label>
+          </li>
+          <li class="list-item">
+            <input type="checkbox" class="hidden-box" id="third" />
+            <label for="third" class="check--label">
+              <span class="check--label-box"></span>
+              <span class="check--label-text">Third Checkbox</span>
+            </label>
+          </li>
+        </ul>
       </form>
     </main>
   </body>
   <script src="script.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
 </html>
