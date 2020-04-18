@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300&family=Manrope&display=swap" rel="stylesheet">
+    <link href="https://rawgit.com/daneden/animate.css/master/animate.min.css" rel="stylesheet"/>
     <link rel="stylesheet/less" type="text/css" href="styles.less" />
     <title>Document</title>
   </head>
@@ -12,7 +14,7 @@
       <h1>todo list</h1>
       <form action="" class="form">
         <input type="text" class="todo" name="todo" />
-        <div class="todo-hint">
+        <div class="todo-hint" id="hint">
           <h1>
             Create todos for yourself so your partner loses one more argument to
             blame you!
@@ -20,6 +22,7 @@
         </div>
         <ul class="list"></ul>
       </form>
+      
     </main>
   </body>
   <script src="script.js"></script>

@@ -12,7 +12,7 @@ addToDO = (text) => {
   list.insertAdjacentHTML(
     "beforeend",
     `
-  <li class="list-item" data-key="${toDo.id}">
+  <li class="list-item animated slideInLeft" data-key="${toDo.id}">
   <span class="close">x</span>
   <input type="checkbox" class="hidden-box" id="${toDo.id}"/>
   <label for=${toDo.id} class="check--label">
@@ -42,8 +42,8 @@ function deleteTodo(key) {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  
-  document.querySelector(".todo-hint").style.display = "none";
+  document.querySelector("#hint").classList.remove("todo-hint");
+  document.querySelector("#hint").classList.add("animated", "bounceOutLeft","visible");
   const item = input.value.trim();
   if (item !== "") {
     addToDO(item);
