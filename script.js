@@ -47,6 +47,7 @@ form.addEventListener("submit", (e) => {
     addToDO(item);
     input.value = "";
     input.focus();
+
   }
 });
 
@@ -54,10 +55,16 @@ list.addEventListener("click", (event) => {
   if (event.target.classList.contains('check--label-box')) {
     const itemKey = event.target.parentElement.dataset.key;
     toggleDone(itemKey);
+
   }
 
   if (event.target.classList.contains("close")) {
+
+    console.log(document.getElementsByClassName(".list-item").className);
+
     const itemKey = event.target.parentElement.dataset.key;
     deleteTodo(itemKey);
+
+
   }
 });
