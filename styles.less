@@ -1,20 +1,17 @@
-
 body {
   height: 100vh;
   background-color: #9fb6bb;
-  overflow: auto;
-}
-.container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100%;
-  
-
+  overflow: auto;
 }
+.container {
+  overflow: hidden;
+}
+
 .todo-info {
-  width: 600px;
   text-align: -webkit-center;
 }
 .icon {
@@ -29,11 +26,6 @@ body {
   height: 40px;
   font-family: "Jura", sans-serif;
   font-size: 20px;
-}
-
-.close {
-  text-align: right;
-  font-family: "Jura", sans-serif;
 }
 .todo-li {
   border: 2px solid black;
@@ -110,6 +102,7 @@ body {
   cursor: pointer;
   padding: 20px;
   border-left: 4px solid #ecf0f1;
+  margin-right: auto;
 
   &:after {
     content: "";
@@ -150,13 +143,24 @@ body {
   }
 }
 .close {
+  text-align: right;
+  font-family: "Jura", sans-serif;
   cursor: pointer;
-  position: absolute;
+  /* position: absolute;
   top: 50%;
-  right: 0%;
+  right: 0%; */
   padding: 12px 16px;
   transform: translate(0%, -50%);
 }
 .close:hover {
   background: #bbb;
+}
+
+@media only screen and (max-width: 614px) {
+  .container {
+    width: 100%;
+  }
+  .list {
+    width: 100%;
+  }
 }
